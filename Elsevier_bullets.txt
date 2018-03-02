@@ -1,0 +1,4 @@
+> Optical and chemiresistive metal-oxide sensors for carbon dioxide and methane are compared
+> Sensors are analyzed for precision, accuracy, and sensitivity.
+> Noise and response time data are reported for the tested sensors.
+> Trade-offs for the selection of an appropriate sensor of those studied in this paper are discussed.
