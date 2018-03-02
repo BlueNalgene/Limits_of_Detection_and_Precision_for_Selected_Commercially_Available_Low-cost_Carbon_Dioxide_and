@@ -224,9 +224,9 @@ TSWLatexianTemp*
 
 # htlatex
 # *.html
+# *.css
 *.4ct
 *.4tc
-*.css
 *.idv
 *.lg
 *.tmp
