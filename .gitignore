@@ -221,3 +221,14 @@ TSWLatexianTemp*
 
 # User Additions
 *.old
+
+# htlatex
+# *.html
+*.4ct
+*.4tc
+*.css
+*.idv
+*.lg
+*.tmp
+*.xref
+*.trc
