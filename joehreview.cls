@@ -15,12 +15,12 @@
 %% version 1999/12/01 or later.
 %% 
 %%
- \def\RCSfile{uoehreview}%
+ \def\RCSfile{joehreview}%
  \def\RCSversion{1.00}%
  \def\RCSdate{2018/09/02}%
  \def\@shortjnl{\relax}
  \def\@issn{000-0000}
- \def\@shortjid{uoehreview}
+ \def\@shortjid{joehreview}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{\@shortjid}[\RCSdate, \RCSversion]
 \def\ABD{\AtBeginDocument}
@@ -52,7 +52,7 @@
 \RequirePackage[super,sort&compress]{natbib}
 \RequirePackage{textcase} %required to automatically use uppercase for sections
 \RequirePackage{setspace} %required to force singlespacing in abstract/keywords
-\RequirePackage{endfloat} %uoeh requires all floats be at the end of the doc
+\RequirePackage{endfloat} %joeh requires all floats be at the end of the doc
 \pagenumbering{gobble} %no page numbers
 \let\comma\@empty
 \let\tnotesep\@empty
@@ -217,4 +217,4 @@
 }
 \endinput
 %%
-%% End of file `uoehreview.cls'.
+%% End of file `joehreview.cls'.
