@@ -1,0 +1,45 @@
+%Comment this line out to use real graphics instead of demo boxes.  Do not use \usepackage[demo]{graphicx} because that causes
+%conflicts with other packages with dependencies.
+\documentclass[times]{joehreview}
+\usepackage{amsmath}
+\usepackage[version=3]{mhchem}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{threeparttable}
+\usepackage{pdfpages}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{microtype}
+\usepackage{placeins}
+\newcommand{\degree}{$^{\circ}$}
+
+\graphicspath{ {./images/} } %this removes clutter from the root folder
+
+
+%Provide a separate title page with author information and upload it as "title page - not for review".  Also include title (sentence case capitalization), keywords (not italicized, in alphabetical order, separated by semi-colons), and word count on review manuscript.  Title should be 16-point Times New Roman, others should be 12-point.  Single spaced.
+%
+%Please move your acknowledgment section to the separate title page (the one with authors listed on it) to keep the review process blinded.
+
+
+
+\begin{document}
+	
+	\begin{frontmatter}
+		\title{Limits of detection and precision for selected commercially available, low-cost carbon dioxide and methane gas sensors}
+		
+		\author{Wesley T. Honeycutt}
+		\author{M. Tyler Ley}
+		\author{Nicholas F. Materer*}	
+		
+		\begin{keyword}
+			carbon dioxide; gas detectors; gas industry; methane; pollution measurement; sensor systems and applications
+			\\~\\
+			\textit{Word Count:} 5,537
+		\end{keyword}
+		
+	\end{frontmatter}
+
+	\section*{Acknowledgment}
+	The authors acknowledge the financial support of this work by the U.S. Department of Energy under contract DE-FOA-0000798.  Additional support was provided by Oklahoma State University. No potential conflict of interest was reported by the authors.
+
+\end{document}
