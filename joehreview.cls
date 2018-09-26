@@ -49,7 +49,7 @@
 
 % We require these things at the very least for the class.
 \RequirePackage{graphicx}
-\RequirePackage[round,super,sort&compress]{natbib}
+\RequirePackage[round,super,sort&compress,comma]{natbib}
 \RequirePackage{textcase} %required to automatically use uppercase for sections
 \RequirePackage{setspace} %required to force singlespacing in abstract/keywords
 \RequirePackage[nomarkers]{endfloat} %joeh requires all floats be at the end of the doc
