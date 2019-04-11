@@ -1,6 +1,7 @@
 %Comment this line out to use real graphics instead of demo boxes.
 %Do not use \usepackage[demo]{graphicx} because that causes
 %conflicts with other packages with dependencies.
+
 \documentclass[sensors,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
 % If you would like to post an early version of this manuscript as a preprint, you may use preprint as the journal and change 'submit' to 'accept'. The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
 
@@ -103,7 +104,7 @@
 	%
 	For environmental monitoring, the selected carbon dioxide sensors were characterized around 400 ppm.
 	%
-	For the methane, sensor response was first monitored at 0 ppm, close to the typical environmental background.
+	For methane, the sensor response was first monitored at 0 ppm, close to the typical environmental background.
 	%
 	The selected sensors were then evaluated at gas concentrations up to 1000 ppm.
 	%
@@ -119,7 +120,7 @@
 		
 		Environmental monitoring of local gas concentration is becoming increasingly important to ensure worker safety and for early identification of potential leaks.
 		%
-		Sensor platforms for real time monitoring of carbon dioxide and methane gas concentrations are of interest as these gases can impact animal health and crop growth.
+		Sensor platforms for real time monitoring of carbon dioxide (\ce{CO2}) and methane (\ce{CH4}) gas concentrations are of interest as these gases can impact animal health and crop growth.
 		%
 		Since these gases are also considered greenhouse gases, monitoring of industrial sites is important to understand their impact on the environment.
 		%
@@ -136,47 +137,52 @@
 		%
 		This lack of information hinders one's ability to select the optimal sensors for sensor platform designed for a given application.
 		%
-		To address this issue, an array of commercially available, low-cost sensors for carbon dioxide (CO$_2$) and methane (CH$_4$) were evaluated at concentrations typical to those required for environmental monitoring, and monitoring around carbon sequestration operations and oil fields.
+		To address this issue, an array of commercially available, low-cost sensors for \ce{CO2} and \ce{CH4} were evaluated at concentrations typical to those required for environmental monitoring, and monitoring around carbon sequestration operations and oil fields.
 		%% PARA
 		
 		Low-cost sensors currently available can be generally categorized by detection method.
 		%
-		Principal among these methods are optical absorption, chemiresistive (based on the electrical changes due to a chemical reaction with an analyte~\cite{wetchakun_semiconducting_2011}), and electrochemical.
+		Principal among these methods are optical absorption, chemiresistive (based on the resistance changes of a material due to chemical reaction with an analyte~\cite{wetchakun_semiconducting_2011}), and electrochemical.
 		%
-		Since studies have cited concerns with electrochemical sensors, such as a short lifetime and lack of robustness~\cite{neri_first_2015}, only optical and chemiresistive sensors were selected for evaluation in this study.
+		Since studies have cited concerns with electrochemical gas concentration sensors, such as a short lifetime and lack of robustness~\cite{neri_first_2015}, only optical and chemiresistive sensors were selected for evaluation in this study.
 		%
-		Optical methods of detecting carbon dioxide and methane are based on measuring the absorption of light at \SI{2352}{\per\centi\meter} and \SI{3015}{\per\centi\meter}, respectively~\cite{frodl_high-precision_2006,zhu_one_2012}.
+		Optical methods of detecting \ce{CO2} and \ce{CH4} are based on measuring the absorption of light at \SI{2352}{\per\centi\meter} and \SI{3015}{\per\centi\meter}, respectively~\cite{frodl_high-precision_2006,zhu_one_2012}.
 		%
 		Since these sensors utilize the Beer-Lambert law to relate absorption to concentration, the calibration is only dependent on the geometry of the sensor and physical properties of the gas~\cite{bacsik_ftir_2004}.
 		%% PARA
 		
 		Lower cost optical sensors typically utilize nondispersive infrared (NDIR) sensing.
 		%
-		This method utilizes a broad spectrum source of light which is restricted by a narrow band pass filter across the absorbance maximum before reaching the detector.
+		This method utilizes a broad spectrum light source which is restricted by a narrow band pass filter across the absorbance maximum before reaching the detector.
 		%
-		As a result, lower cost parts can be used and the design can be both more compact and robust.
+		As a result of the simple construction requirements of NDIR, lower cost parts can be used and the design can be both more compact and robust.
 		%
-		In general, NDIR detection is utilized for carbon dioxide due to its relatively large molar absorption coefficient, allowing for short path lengths to be used in devices.
+		In general, NDIR detection is utilized for \ce{CO2} due to its relatively large molar absorption coefficient, allowing for short path lengths to be used in devices.
 		%
-		Methane is limited in practical applications due to its lower absorption coefficient and overlapping symmetric C-H stretches.
+		Use of NDIR detectors for \ce{CH4} is limited in practical applications due to its lower absorption coefficient and overlapping symmetric C-H stretches.
 		%
-		The overlapping stretches makes methane difficult to distinguish from other common aliphatic gases such as ethane and propane~\cite{coblentz_society_inc._evaluated_????}.
+		The overlapping stretches makes \ce{CH4} difficult to distinguish from other common aliphatic gases such as ethane and propane~\cite{coblentz_society_inc._evaluated_????}.
 		%
 		Although selectivity of the NDIR sensors with respect to different analyte gases was not explored in this study, it should be considered when these sensors are integrated into a monitoring device. 
 		%% PARA
 		
-		Chemiresistive sensors for detection of methane typically use a thin oxide film~\cite{neri_first_2015}.
+		Chemiresistive sensors for detection of \ce{CH4} typically use a thin oxide film~\cite{neri_first_2015}.
 		%
 		These sensors work by measuring resistance changes due to differences in the electron transport through the metal oxide film, in the presence of oxygen and reactive gases~\cite{albert_cross-reactive_2000}.
 		%
-		When the film is exposed to methane, the molecule adsorbs and reacts with surface oxygen species resulting in a change in the electrical conductivity~\cite{wang_metal_2010,prudenziati_thick-film_1986}.
+		When the film is exposed to \ce{CH4}, the molecule adsorbs and reacts with surface oxygen species resulting in a change in the electrical conductivity~\cite{wang_metal_2010,prudenziati_thick-film_1986}.
 		%
-		Since the sensor depends on chemical reactions involving both atmospheric oxygen and methane for proper functioning, the measurement is dependent on the relative humidity, temperature, and film preparation.
+		Since the sensor depends on chemical reactions involving both atmospheric oxygen and \ce{CH4} for proper functioning, the measurement is dependent on the partial pressures of these gases.
 		%
-		Chemiresistive sensors are also known to respond to a range of hydrocarbon gases~\cite{sekhar_development_2016}. In many cases, the non-linear response curves for additional gases are included in the documentation provided by the manufacturer.
+		By the laws governing interactions of gases, the chemiresistive sensors are dependent on atmospheric properties such as relative humidity and temperature in addition to film preparation.
 		%
-		However, similar to the optical sensors for methane, the selectivity was not explored but should be considered when integrating these sensors into a sensor platform.
+		Chemiresistive sensors are also known to respond to a range of hydrocarbon gases~\cite{sekhar_development_2016}.
+		%
+		In many cases, the non-linear response curves for additional gases are included in the documentation provided by the manufacturer.
+		%
+		However, similar to the optical sensors for \ce{CH4}, the selectivity was not explored but should be considered when integrating these sensors into a sensor platform.
 		%% PARA
+		
 		
 	\section{Methods}
 		\label{sec:methods}
@@ -185,69 +191,77 @@
 
 			With two exceptions, the sensors selected were all commercially available in large volumes (at least 1000 units) at low-cost (defined here as less than \$100 per unit in bulk)
 			%
-			Selected sensors were expected to have sensitivity at the environmental concentrations of carbon dioxide and methane.
+			Selected sensors were expected to have sensitivity at the environmental concentrations of \ce{CO2} and \ce{CH4}.
 			%
-			For carbon dioxide, this level is around 400 ppm~\cite{blasing_recent_2016,dlugokencky_trends_2016}.
+			For \ce{CO2}, this level is around 400 ppm~\cite{blasing_recent_2016,dlugokencky_trends_2016}.
 			%
-			For methane, the baseline atmospheric concentration is under 2 ppm~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}.
+			For \ce{CH4}, the baseline atmospheric concentration is under 2 ppm~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}.
 			%
-			In total, six carbon dioxide sensors were selected for testing, the K-30 SE-0018, COZIR AMB GC-020, Gascard CO$_{2}$, MSH-P/CO2/NC/5/V/P/F, MSH-DP/HC/CO2/NC/P/F, and Telaire T6615.
+			In total, six \ce{CO2} sensors were selected for testing, the K-30 SE-0018, COZIR AMB GC-020, Gascard CO$_{2}$, MSH-P/CO2/NC/5/V/P/F, MSH-DP/HC/CO2/NC/P/F, and Telaire T6615.
 			%
-			Given the prevalence of optical sensors for carbon dioxide, no chemiresistive sensor was selected for this analyte.
+			Given the prevalence of optical sensors for \ce{CO2}, no chemiresistive sensor was selected for this analyte.
 			%
-			For methane, seven sensors were evaluated, the MQ-4, Gascard CH$_{4}$, MSH-P/HC/NC/5/V/P/F, MSH-DP/HC/CO2/NC/P/F, TGS-2600, TGS-2610, and TGS-2611.
+			For \ce{CH4}, seven sensors were evaluated, the MQ-4, Gascard CH$_{4}$, MSH-P/HC/NC/5/V/P/F, MSH-DP/HC/CO2/NC/P/F, TGS-2600, TGS-2610, and TGS-2611.
 			%
-			The relevant properties, obtained from the manufacturer documentation, for the carbon dioxide (Table S1) and methane sensors (Table S2) are summarized in the supplementary materials.
+			The relevant properties, obtained from the manufacturer documentation, for the \ce{CO2} (Table S1) and \ce{CH4} sensors (Table S2) are summarized in the supplementary materials.
 			%
 			The selected sensors meet the requirements for use in portable low-power monitoring devices~\cite{karpov_energy_2013}.
 			%% PARA
 			
-			The K-30, COZIR, Dynament, and Telaire sensors are all NDIR carbon dioxide sensors.
+			
+			The K-30, COZIR, Dynament, and Telaire sensors are all NDIR \ce{CO2} sensors.
 			%
-			The Dynament hydrocarbon sensor (MSH-P/HC) was chosen as inexpensive candidates for methane detection.
+			The Dynament hydrocarbon sensor (MSH-P/HC) was chosen as inexpensive candidates for \ce{CH4} detection.
 			%
-			Dynament also provides a dual gas NDIR sensor (MSH-DP/HC/CO2) designed to measure both carbon dioxide and methane concentrations, which is attractive for applications requiring both low-cost and portability.
+			Dynament also provides a dual gas NDIR sensor (MSH-DP/HC/CO2) designed to measure both \ce{CO2} and \ce{CH4} concentrations, which is attractive for applications requiring both low-cost and portability.
 			%
-			Finally, carbon dioxide and methane Gascard (sold by GHG Analytical) sensors were included, even though they were more expensive than the other chosen NDIR sensors.
+			Finally, \ce{CO2} and \ce{CH4} Gascard (sold by GHG Analytical) sensors were included, even though they were more expensive than the other chosen NDIR sensors.
 			%
-			 However, the Gascard sensors are still significantly less expensive than typical bench-top instruments. The inclusion of pressure and temperatures compensation make them attractive enough to compensate for the expense.
+			However, the Gascard sensors are still significantly less expensive than typical bench-top instruments.
+			%
+			The inclusion of pressure and temperature sensors make them attractive enough to compensate for the expense.
 			%% PARA
 			
 
-			The low-cost chemiresistive-based methane sensors studied here are typically used in gas warning systems~\cite{chiu_towards_2013}.
+			The low-cost chemiresistive-based \ce{CH4} sensors studied here are typically used in gas warning systems~\cite{chiu_towards_2013}.
 			%
 			Selected sensors include the MQ-4 from Hanwei Electronics and TGS-2600, TGS-2610, and TGS-2611 manufactured by Figaro Engineering Inc. sensors.
 			%
-			The TGS sensors are used in commercial methane detectors, and the TGS-2600 sensor has been previously evaluated for atmospheric applications~\cite{eugster_performance_2012,bossche_potential_2017}.
+			The TGS sensors are used in commercial \ce{CH4} detectors, and the TGS-2600 sensor has been previously evaluated for atmospheric applications~\cite{eugster_performance_2012,bossche_potential_2017}.
 			%
 			There are several different MQ versions optimized for hydrocarbon sensing.
 			%
-			The MQ-4 sensor was chosen as this variant was specifically tuned for methane.
+			The MQ-4 sensor was chosen as this variant was specifically tuned for \ce{CH4}.
 			%
 			Chemiresistive sensors required a minimum conditioning period or ``burn-in'' time.
+			%
+			This ``burn-in'' time is a period (often exceeding 24 hours) during which the heating element is allowed to constantly heat the sensing element of the sensor.
 			%
 			The ``burn-in'' time was met or exceeded for all chemiresistive sensors.
 			%% PARA
 			
+			
 		\subsection{Analyte Preparation and Sensor Testing}
 			
-			To test these sensors under controlled conditions, a gas mixing apparatus (Fig.~\ref{fig:exposureapparatus}) was constructed.
+			To test these sensors under controlled conditions, a gas mixing apparatus (Figure~\ref{fig:exposureapparatus}) was constructed which prepares gas mixtures of known concentration by controlling the positive pressure flow of gas streams into a mixing chamber.
 			%
-			A high-quality bench-top analyzer (California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer), sensitive to both carbon dioxide and methane, was used as a precision reference. This setup allows gas flows of a known concentration to be prepared from a calibrated gas cylinder by mixing with a carrier gas.
+			A high-quality bench-top analyzer (California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer), sensitive to both \ce{CO2} and \ce{CH4}, was used as a precision reference.
+			%
+			This setup allows gas flows of a known concentration to be prepared from a calibrated gas cylinder by mixing with a carrier gas.
 			%
 			The calibrated gas contained a mixture of gases at concentrations listed in Table~\ref{tab:ratios} depending on the specific experiment being performed.
 			%
-			Since the objective is to address the accuracy, precision, sensitivity, and limits of detection, only carbon dioxide and methane were utilized.
+			Since the objective is to address the accuracy, precision, sensitivity, and limits of detection, only \ce{CO2} and \ce{CH4} were utilized.
 			%
 			However, selectivity requirements must be considered when these sensors are integrated into a monitoring platform.
 			%
-			For carbon dioxide experiments, the carrier gas was typically nitrogen.
+			For \ce{CO2} experiments, the carrier gas was typically nitrogen.
 			%
-			For methane, medical grade air was utilized since the chemiresistive sensors required oxygen to correctly measure the methane concentration.
+			For \ce{CH4}, medical grade air was utilized as a carrier gas since the chemiresistive sensors required oxygen to correctly measure the \ce{CH4} concentration.
 			%
 			All reported concentrations were determined using the bench-top analyzer.
 			%
-			Thus, the concentration ranges and all reported values are not whole numbers.
+			Thus, the concentration ranges and all related values are reported here not as whole numbers but direct observations.
 			%% PARA
 			
 			\begin{figure}[!t]
@@ -280,30 +294,30 @@
 			%
 			The uncertainty in the gas concentration results in a systematic error.
 			%
-			Around atmospheric levels of methane, this error is less than 0.4~ppm.
+			Around atmospheric levels of \ce{CH4}, this error is less than 0.4~ppm.
 			%
-			For atmospheric levels of carbon dioxide, the error is approximately 8~ppm.
+			For atmospheric levels of \ce{CO2}, the error is approximately 8~ppm.
 			%
-			Since the fluctuations around the mean were independent of the exact concentration (see Section~\ref{sec:main_baseline}), this systematic error will not affect the results from the baseline noise or the International Union of Applied Chemistry (IUPAC) Limit of Detection, discussed below.
+			Since the fluctuations around the mean were independent of the exact concentration (see Section~\ref{sec:main_baseline}), this systematic error will not effect the results from the baseline noise or the International Union of Applied Chemistry (IUPAC) limit of detection, discussed below.
 			%
 			For the sensor calibrations, uncertainty in the absolute concentration of the carrier gas will introduce an error in the intercept but not the slope.
 			%
-			Thus, this systematic error will have small effect on the calibration-corrected Limit of Detection.
+			Thus, this systematic error will have small effect on the calibration-corrected limit of detection.
 			%
 			However, this systematic error was found to be insignificant relative to the random errors in the experiment.
 			%% PARA
 			
-			Multiple sensors were operated concurrently as shown in Fig.~\ref{fig:exposureapparatus2}.
+			Multiple sensors were operated concurrently as shown in Figure~\ref{fig:exposureapparatus2}.
 			%
-			The ``Gas Mixer'' in this diagram is the gas mixing apparatus shown in Fig.~\ref{fig:exposureapparatus}, and the ``Gas Analyzer'' is the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.
+			The ``Gas Mixer'' in this diagram is the gas mixing apparatus shown in Figure~\ref{fig:exposureapparatus}, and the ``Gas Analyzer'' is the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.
 			%
-			There are two types of sampling methods used by the selected sensors; diffusion and flow (see Table S1 and S2 in the supplemental).
+			There are two types of sampling methods used by the selected sensors; diffusion and flow (see Table S1 and S2 in the supplemental materials).
 			%
 			Flow sampling sensors are designed such that the analyte gases must physically pass through a sampling chamber within the sensor.
 			%
 			In terms of applications, these sensors typically require additional filters to be added upstream to prevent inclusion of particulate matter, which may damage the sensor or introduce measurement error.
 			%
-			In the experimental setup (Fig.~\ref{fig:exposureapparatus2}), the flow capable sensors were connected directly to gas flow from the mixing apparatus.
+			In the experimental setup (Figure~\ref{fig:exposureapparatus2}), the flow capable sensors were connected directly to gas flow from the mixing apparatus.
 			%
 			In addition to the flow sensors, another common sampling technique relies on diffusion through a fine mesh screen or film.
 			%
@@ -311,11 +325,11 @@
 			%
 			This method also eliminates the extra pump and particulate filters required for sensors that require gas flow.
 			%
-			The small ``sensor flow box'' enclosures depicted in Fig.~\ref{fig:exposureapparatus2} contained the K-30 carbon dioxide sensor and a socketable chemiresistive methane sensor (such as the MQ-4 or TGS series sensors).
+			The small ``sensor flow box'' enclosures depicted in Figure~\ref{fig:exposureapparatus2} contained the K-30 \ce{CO2} sensor and a socketable chemiresistive \ce{CH4} sensor (such as the MQ-4 or TGS series sensors).
 			%
 			The larger ``gas flow chamber'' contained the COZIR, Telaire, Dynament, and K-30 sensors.
 			%
-			Given the large total volume, data collected from the sensors in this chamber were analyzed only after the system reached a constant concentration following the introduction of a gas with known concentration of carbon dioxide or methane.
+			Given the large total volume, data collected from the sensors in this chamber were analyzed only after the system reached a constant concentration following the introduction of a gas with known concentration of \ce{CO2} or \ce{CH4}.
 			%
 			In some experiments, performed to accurately measure the response time for chemiresistive sensors, a smaller sensor enclosure (internal volume \SI{2.54}{\centi\meter\cubed}) was used to minimize the time to reach a stable concentration.
 			%% PARA
@@ -326,7 +340,7 @@
 				\includegraphics[width=\columnwidth]{honey2.pdf}
 				\caption{The diagram shows the flow of gas from the mixing apparatus to Gascard sensors, small enclosures containing sensors, the large gas flow chamber, and finally to the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.
 				%
-				The gas mixing apparatus is shown in Fig.~\ref{fig:exposureapparatus}.
+				The gas mixing apparatus is shown in Figure~\ref{fig:exposureapparatus}.
 				%
 				The reported concentrations are based on the value detected by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.}
 				\label{fig:exposureapparatus2}
@@ -346,13 +360,13 @@
 			%
 			In all cases, the internal electronics within the selected optical sensors process the option data and provide a digital output.
 			%
-			For example, the K-30 reports the concentration directly, while the Gascard reports a digital value between zero and one, with one being the maximum concentration (30,000 ppm carbon dioxide for the sensor used in this study).
+			For example, the K-30 reports the concentration directly, while the Gascard reports a digital value between zero and one, with one being the maximum concentration (30,000 ppm \ce{CO2} for the sensor used in this study).
 			%
-			For the Gascard, the scaling was applied to the output before analyzing.
+			For the Gascard, scaling was applied to the output before analyzing.
 			%
-			The chemiresistive sensors were energized using the recommended voltage for the heater element and the response was measured using a 12-bit A/D converter, after buffering and filtering, across a reference resistor (a 10 k$\Omega$ resistor was used for $R_{ref}$).
+			The chemiresistive sensors were energized using the recommended voltage for the heater element and the response was measured using a 12-bit A/D converter, after buffering and filtering, across a reference resistor (a \SI{10}{\kilo\ohm} resistor was used for $R_{ref}$).
 			%
-			The A/D converter was referenced using the 5V supply, which was also connected to the sensing element of the chemiresistive sensor. Equation~\ref{eq:vtos} describes the conversion of the measured voltage ($V_{measured}$) to the conductivity ($\varsigma$), measured in Siemens (S).
+			The A/D converter was referenced using the \SI{5}{\volt} supply, which was also connected to the sensing element of the chemiresistive sensor. Equation~\ref{eq:vtos} describes the conversion of the measured voltage ($V_{measured}$) to the conductivity ($\varsigma$), measured in Siemens (S).
 			%% PARA
 			
 	
@@ -361,15 +375,19 @@
 			
 			Calibration curve of each sensor was determined by varying concentrations and recording the output with time.
 			%
-			The carbon dioxide sensors were calibrated using gas concentrations from 34.5 to 1020 ppm.
+			The \ce{CO2} sensors were calibrated using gas concentrations from 34.5 to 1020 ppm.
 			%
-			For the methane sensors, calibration curves were generated from gas concentrations between 1.85 and 995 ppm.
+			For the \ce{CH4} sensors, calibration curves were generated from gas concentrations between 1.85 and 995 ppm.
 			%
 			 The procedure starts with a constant flow of the carrier gas until stable baseline is obtained.
 			%
 			Next, the analyte gas at a known concentration is introduced.
 			%
-			After 24 hours, the carrier gas is reintroduced and the system is again allowed to stabilize before the next measurement. During this procedure, concentration data from each sensor was continually collected. From this data, the average baseline and response to each gas concentration can be extracted.
+			After \SI{24}{\hour}, the carrier gas is reintroduced and the system is again allowed to stabilize before the next measurement. 
+			%
+			During this procedure, concentration data from each sensor was continually collected. 
+			%
+			From these data, the average baseline and response to each gas concentration was extracted.
 			%
 			The average response at each concentration was determined from the data collected after the system stabilized (include any overshoot or ringing) after each new concentration.
 			%% PARA
@@ -379,7 +397,7 @@
 				f(x)=\frac{a\times b\times x}{1+b\times x}
 			\end{equation}
 
-			The fitting procedures for the optical and chemiresistive sensor differ.
+			The fitting procedures for the optical and chemiresistive sensors differ.
 			%
 			The raw output of the optical absorption-based sensors is expected to follow Beer-Lambert law.
 			%
@@ -387,35 +405,39 @@
 			%
 			For the optical sensors, the accuracy and precision of the internal calibration are quantified by linear regression.
 			%
-			The calibration curves for the chemiresistive are non-linear, and modeled using a Langmuir-like or Langmuirian form (Equation~\ref{eq:langmuirian}). Equation~\ref{eq:langmuirian} converges to a linear function the ppm approaches zero, which simplifies the Limit of Detection calculations discussed below.
+			The calibration curves for the chemiresistive are non-linear, and modeled using a Langmuir-like or Langmuirian form (Equation~\ref{eq:langmuirian}).
+			%
+			Equation~\ref{eq:langmuirian} converges to a linear function the ppm approaches zero, which simplifies the limit of detection calculations discussed below.
 			%
 			The parameters $a$ and $b$, along with the asymptotic standard errors, are determined by fitting the experimental data using the Levenberg-Marquardt algorithm in $gnuplot$~\cite{williams_gnuplot_2016}.
 			%
-			Additional non-linear functions have been suggested by kinetic analysis~\cite{barsan_fundamental_1999,ahlers_rate_2005}. Of these, a power law model, where the log of the output is proportional to the log of the ppm, is considered.
+			Additional non-linear functions have been suggested by kinetic analysis~\cite{barsan_fundamental_1999,ahlers_rate_2005}.
+			%
+			Of these, a power law model, where the $log$ of the output is proportional to the $log$ of the concentration in ppm, is considered.
 			%% PARA
 			
 		\subsection{Precision and Baseline Noise Tests}
 			\label{sec:method_baseline}
 		
-			The precision of the sensors was determined by a 20- to 30-hour data collection run at a known concentration and uniform flow.
+			Precision of the sensors was determined by a \SI{20}{\hour} to \SI{30}{\hour} data collection period at a known concentration and uniform flow.
 			%
-			These experiments were performed around the baseline atmospheric concentration for each analyte gas, which is approximately 400 ppm for carbon dioxide~\cite{blasing_recent_2016,dlugokencky_trends_2016} and under 2 ppm for methane~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}. 
+			These experiments were performed around the baseline atmospheric concentration for each analyte gas, which is approximately 400 ppm for \ce{CO2}~\cite{blasing_recent_2016,dlugokencky_trends_2016} and under 2 ppm for \ce{CH4}~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}. 
 			%% PARA
 				
 		
 		\subsection{Limit of Detection Determination}
 			\label{sec:method_detection}
-			The Limit of Detection is the minimum concentration that can be detected as significantly different from the background~\cite{long_limit_1983,currie_detection:_1997,mocak_j._statistical_2009}.
+			The limit of detection is the minimum concentration that can be detected as significantly different from the background~\cite{long_limit_1983,currie_detection:_1997,mocak_j._statistical_2009}.
 			%
-			IUPAC defines the Limit of Detection as three times the standard deviation ($\sigma$) from the background.
+			IUPAC defines the limit of detection as three times the standard deviation ($\sigma$) from the background.
 			%
-			For the sensors discussed here, the raw output from the sensors must be transformed into concentration value, and any error in the calibration will affect the Limit of Detection.
+			For the sensors discussed here, the raw output from the sensors must be transformed into concentration value, and any error in the calibration will affect the limit of detection.
 			%
 			For measurements requiring a calibration curve, Long and Winefordner provide a review of the various definitions as well as several examples~\cite{long_limit_1983}.
 			%
-			For optical sensors, their procedure to include the errors in the slope and intercept in the calculated the Limit of Detection was utilized.
+			For optical sensors, their procedure to include the errors in the slope and intercept in the calculated the limit of detection was utilized.
 			%
-			For the non-linear chemiresistive sensors, the asymptotic standard errors in $a$ and $b$ were propagation to correct the IUPAC Limit of Detection.
+			For the non-linear chemiresistive sensors, the asymptotic standard errors in $a$ and $b$ were propagation to correct the IUPAC limit of detection.
 			%% PARA
 			
 	
@@ -424,24 +446,28 @@
 		\subsection{Sensor Response}
 		\label{sec:time}
 	
-			Fig.~\ref{fig:peakdetailco2} shows the response of two selected carbon dioxide sensors, the K-30 and Gascard, to 600 and 1400 concentration steps of carbon dioxide.
+			Figure~\ref{fig:peakdetailco2} shows the response of two selected \ce{CO2} sensors, the K-30 and Gascard, to 600 ppm and 1400 ppm concentration steps of \ce{CO2}.
 			%
 			The K-30 output was used directly, while the Gascard data was multiplied by the provided scaling factor before plotting.
 			%
 			This data demonstrates relative similarity in behavior of the selected sensors in the presence of concentration changes well above the limit of detection.
 			%
-			It was observed that all the optical sensors responded quickly to an increase in carbon dioxide inside the environmental chamber, limited only by the internal sampling rate of the sensor.
+			It was observed that all the optical sensors responded quickly to an increase in \ce{CO2} inside the environmental chamber, limited only by the internal sampling rate of the sensor.
 			
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey3.pdf}
-				\caption{The Gascard (top) and K-30 (bottom) sensor response over time at high (1433 ppm, plotted with ``$\times$'' on the plot) and low (577 ppm, plotted with ``$+$'') concentrations of carbon dioxide.
+				\caption{The Gascard (top) and K-30 (bottom) sensor response over time at high (1433 ppm, plotted with ``$\times$'' on the plot) and low (577 ppm, plotted with ``$+$'') concentrations of \ce{CO2}.
 				%
 				The reported concentrations (577 and 1433 ppm) were determined by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.}
 				\label{fig:peakdetailco2}
 			\end{figure}
 			
-			Fig.~\ref{fig:mq4step} depicts a plot of the response of an MQ-4 sensor upon exposure to five different concentrations of methane between 500 and 2200 ppm, which could represent a methane leak. In our setup, the MQ-4 produces significant overshoot. Some of the overshoot is inherent to the sensor, but some could also be a result of the small interruption in the gas flow during a concentration change.
+			Figure~\ref{fig:mq4step} depicts a plot of the response of an MQ-4 sensor upon exposure to five different concentrations of \ce{CH4} between 500 ppm and 2200 ppm, which could represent a \ce{CH4} leak.
+			%
+			In our setup, the MQ-4 produces significant overshoot.
+			%
+			Some of the overshoot is inherent to the sensor, but some could also be a result of the small interruption in the gas flow during a concentration change.
 			%
 			For all concentrations, a stable value within 2.5\% of the mean was produced after 78$\pm$\SI{10}{\second}, when averaged over all experiments.
 			%
@@ -452,38 +478,42 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey6.pdf}
-				\caption{The MQ-4 response to difference methane concentrations determined by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.}
+				\caption{The MQ-4 response to difference \ce{CH4} concentrations determined by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.}
 				\label{fig:mq4step}
 			\end{figure}
 			
 		\subsection{Calibration Result}
 			\label{sec:calibration}
 
-			Typical calibration plots for an optical and a chemiresistive sensors are shown in Fig.~\ref{fig:gascardcodiff}.
+			Typical calibration plots for an optical and a chemiresistive sensors are shown in Figure~\ref{fig:gascardcodiff}.
 			%
 			The data points are the measured values at each concentration, while the line is a fit to the data.
 			%
-			The upper plot in Fig.~\ref{fig:gascardcodiff} is a calibration curve obtained from the Gascard sensor, along with the linear fit.
+			The upper plot in Figure~\ref{fig:gascardcodiff} is a calibration curve obtained from the Gascard sensor, along with the linear fit.
 			%
 			The slope is $1.02\pm 0.02$ indicating an excellent calibration and precision.
 			%
-			Above their respective detection limits, good linear fits were obtained for each optical sensor. Linear regression results show the slopes for the selected sensors are all close to one, indicting good precision.
+			Above their respective detection limits, good linear fits were obtained for each optical sensor.
 			%
-			For the carbon dioxide sensors, the slopes range from 1.11 to 0.86, with the MSH-P/CO2 and Telair as the high and low outliers, respectfully.
+			Linear regression results show the slopes for the selected sensors are all close to one, indicting good precision.
+			%
+			For the \ce{CO2} sensors, the slopes range from 1.11 to 0.86, with the MSH-P/CO2 and Telair as the high and low outliers, respectively.
 			%
 			Excluding these sensors, the average slope is 0.99.
 			%
-			For the methane sensors, the slopes are 0.98 (Gascard), 1.03 (MSH-DP/HC/CO2), and 1.20 (MSH-P/HC).
+			For the \ce{CH4} sensors, the slopes are 0.98 (Gascard), 1.03 (MSH-DP/HC/CO2), and 1.20 (MSH-P/HC).
 			%
 			The fact that a majority of the slopes are close to one is expected as the optical path length and the physical properties of the analyte determine the response.
 			%
 			In contrast to the slopes, the value of the vertical intercept or the response at zero concentration vary widely, exceeding several 100 ppm in many cases.
 			%
-			Large variations are found even between sensors from the same manufacture. Since the intercept depends on the intensity of the source and the detector, these variations are not unexpected.
+			Large variations are found even between sensors from the same manufacturer.
+			%
+			Since the intercept depends on the intensity of the source and the detector, these variations are not unexpected.
 			%
 			To address this issue, a majority of the optical sensors tested provide an easy way to adjust the intercept.
 			%
-			For example, the K30 sensors can autocalibrate the zero based on known average background level of carbon dioxide.
+			For example, the K-30 sensors can auto-calibrate the zero based on known average background level of \ce{CO2}.
 			%
 			In general, it was found the intercept must be adjusted before deployment.
 			%% PARA
@@ -491,17 +521,19 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=0.9\columnwidth]{honey9.pdf}
-				\caption{The response of the Gascard and MQ-4 sensors with respect to the concentration reported from the California Analytical Instruments Inc. ZRE Non-Dispersive Infrared Analyzer for different concentrations of either carbon dioxide or methane, respectively.
+				\caption{The response of the Gascard and MQ-4 sensors with respect to the concentration reported from the California Analytical Instruments Inc. ZRE Non-Dispersive Infrared Analyzer for different concentrations of either \ce{CO2} or \ce{CH4}, respectively.
 					%
-					The top part of the figure shows the response of an optical carbon dioxide sensor with the expected linear behavior.
+					The top part of the figure shows the response of an optical \ce{CO2} sensor with the expected linear behavior.
 					%
-					The bottom part of the figure shows the response of a chemiresistive methane sensor (MQ-4, response is expressed in conductivity) with a fit to the non-linear response}
+					The bottom part of the figure shows the response of a chemiresistive \ce{CH4} sensor (MQ-4, response is expressed in conductivity) with a fit to the non-linear response}
 				\label{fig:gascardcodiff}
 			\end{figure}
 			
-			The lower plot in Fig.~\ref{fig:gascardcodiff} shows the response of a chemiresistive methane sensor (MQ-4, response is expressed in conductivity) with non-linear fit to a  Langmuirian form  (Equation~\ref{eq:langmuirian}).
+			The lower plot in Figure~\ref{fig:gascardcodiff} shows the response of a chemiresistive \ce{CH4} sensor (MQ-4, response is expressed in conductivity) with non-linear fit to a  Langmuirian form (Equation~\ref{eq:langmuirian}).
 			%
-			For ppm concentration above 500 ppm, acceptable results were also obtained using a power law model. However, this model produced a fit that increased too rapidly with ppm at lower concentration.
+			For ppm concentration above 500 ppm, acceptable results were also obtained using a power law model.
+			%
+			However, this model produced a fit that increased too rapidly with ppm at lower concentration.
 			%
 			At high concentrations, this model did not accurately represent a real sensor where the response approaches a constant.
 			%
@@ -512,7 +544,7 @@
 			It is also significant that the chemiresistive sensors shows a rapid increase in conductivity with concentration below 100 ppm when compared to the optical sensors.
 			%% PARA
 			
-			Unlike optical sensors for carbon dioxide, which only needs reading at zero ppm to be experimentally established, chemiresistive sensors require the measurement of a complete non-linear calibration curve to ensure accuracy and precision.
+			Unlike optical sensors for \ce{CO2}, which only needs reading at zero ppm to be experimentally established, chemiresistive sensors require the measurement of a complete non-linear calibration curve to ensure accuracy and precision.
 			%
 			The output of the chemiresistive sensors are also dependent on temperature and humidity, further complicating the calibration~\cite{benkstein_analytical_2014}.
 			%
@@ -525,9 +557,13 @@
 			
 			The measurement precision and baseline noise of each sensor was performed as described in Section~\ref{sec:method_baseline}.
 			%
-			In most cases, the precision of the sensors was determined by a 20 to 30 hour data collection time at a known concentration (400 ppm for carbon dioxide and 0 ppm for methane based on previously discussed atmospheric baselines)under a uniform flow.
+			In most cases, the precision of the sensors was determined by a \SI{20}{\hour} to \SI{30}{\hour} data collection time at a known concentration (400 ppm for \ce{CO2} and 0 ppm for \ce{CH4} based on previously discussed atmospheric baselines) under uniform flow.
 			%
-			In general, the optical sensors displayed flat baselines. Chemiresistive sensors typically display baseline changes due to humidity and temperature, which must be taken into account in monitoring applications. Fig.~\ref{fig:MQ4TGSbaseline} shows a typical data set for the TGS-2611 and MQ-4 sensor.
+			In general, the optical sensors displayed flat baselines.
+			%
+			Chemiresistive sensors typically display baseline changes due to humidity and temperature, which must be taken into account in monitoring applications.
+			%
+			Figure~\ref{fig:MQ4TGSbaseline} shows a typical data set for the TGS-2611 and MQ-4 sensor.
 			%
 			TGS-2611 sensor displayed significantly less baseline drift than the MQ-4 sensor.
 			%% PARA
@@ -536,7 +572,7 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey5.pdf}
-				\caption{Long term baseline data were collected at the atmospheric baseline conditions (using a bottle of compressed medical grade breathing air (approximately 0 ppm methane), in the gas mixing chamber.
+				\caption{Long term baseline data were collected at the atmospheric baseline conditions (using a bottle of compressed medical grade breathing air (approximately 0 ppm \ce{CH4}), in the gas mixing chamber.
 				%
 				The baseline fluctuations can be observed in these plots.}
 				\label{fig:MQ4TGSbaseline}
@@ -544,7 +580,9 @@
 			
 			Since the initial Fourier analysis showed no significant periodic variations, distribution of the digitized sensor output around the mean response of the sensor was utilized to quantify the precision and baseline noise.
 			%
-			The data stream (sensor output with time) from each sensor was subtracted from the mean response of the sensor, and a histogram of these differences was created. Since the digitized sensor outputs have a finite number of possible output values, no additional bins were created while producing the analysis.
+			The data stream (sensor output with time) from each sensor was subtracted from the mean response of the sensor, and a histogram of these differences was created.
+			%
+			Since the digitized sensor outputs have a finite number of possible output values, no additional bins were created while producing the analysis.
 			%
 			Although the data utilized for this analysis were obtained at typical environmental concentrations, additional experiments found that the measured deviation around the mean for each sensor was independent of the concentration of analyte gas.
 			%
@@ -552,13 +590,13 @@
 			%% PARA
 			
 
-			The resulting histograms, along with a best-fit Gaussian peak, are shown in Figs.~\ref{fig:gaussco2}~and~\ref{fig:gaussch4} for the carbon dioxide and methane sensors, respectively.
+			The resulting histograms, along with a best-fit Gaussian peak, are shown in Figures~\ref{fig:gaussco2}~and~\ref{fig:gaussch4} for the \ce{CO2} and \ce{CH4} sensors, respectively.
 			%
-			In Table~\ref{tab:stddev}, $\sigma_{GAUSS}$ is the standard deviation determine from the Gaussina fit.
+			In Table~\ref{tab:stddev}, $\sigma_{GAUSS}$ is the standard deviation determined from the Gaussian fit.
 			%
 			The standard deviation ($\sigma$) calculated from the background subtracted sensor data is almost identical to $\sigma_{GAUSS}$.
 			%
-			In Figs.~\ref{fig:gaussco2}~and~\ref{fig:gaussch4}, the abscissa (x$-$coordinate) was scaled by the standard deviation of the data set and the area normalized to one.
+			In Figures~\ref{fig:gaussco2}~and~\ref{fig:gaussch4}, the abscissa (x$-$coordinate) was scaled by the standard deviation of the data set and the area normalized to one.
 			%
 			The resolution of the dual gas Dynament (MSH-DP/HC/CO2) sensor was insufficient to properly determine the fluctuations around the mean, as this sensor oscillated between two values with time at the given concentration.
 			%
@@ -571,7 +609,7 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey7.pdf}
-				\caption{Frequency distribution of the digitized sensor output around the mean response of the sensor (points), along with Gaussian non-linear for each carbon dioxide sensors around the typical environmental baseline concentration of 400 ppm.
+				\caption{Frequency distribution of the digitized sensor output around the mean response of the sensor (points), along with Gaussian non-linear for each \ce{CO2} sensors around the typical environmental baseline concentration of 400 ppm.
 				%
 				Any deviation between the center of the Gaussian fit and the mean are due to significant asymmetry of the frequency distribution around the mean.}
 				\label{fig:gaussco2}
@@ -580,19 +618,19 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey8.pdf}
-				\caption{Frequency distribution of the digitized sensor output around the mean response of the sensor (points), along with Gaussian non-linear fit for each methane sensor around the typical environmental baseline concentration of 0 ppm.
+				\caption{Frequency distribution of the digitized sensor output around the mean response of the sensor (points), along with Gaussian non-linear fit for each \ce{CH4} sensor around the typical environmental baseline concentration of 0 ppm.
 				%
 				Any deviation between the center of the Gaussian fit and the mean are due to significant asymmetry of the frequency distribution around the mean.}
 				\label{fig:gaussch4}
 			\end{figure}
 			
-			To determine the quality of the Gaussian fits in Figs.~\ref{fig:gaussco2}~and~\ref{fig:gaussch4}, the root-mean-squared error (RMSE) between the fit and the experimentally generated histogram was calculated for each sensor.
+			To determine the quality of the Gaussian fits in Figures~\ref{fig:gaussco2}~and~\ref{fig:gaussch4}, the root-mean-squared error (RMSE) between the fit and the experimentally generated histogram was calculated for each sensor.
 			%
 			These values are also listed in Table~\ref{tab:stddev}.
 			%
-			For RMSE, a lower value indicates that the Gaussian function fits closely to the data points, whereas a higher value indicates a poorer fix.
+			For RMSE, a lower value indicates that the Gaussian function fits closely to the data points, whereas a higher value indicates a poorer fit.
 			%
-			 The values listed in Table~\ref{tab:stddev} range from roughly 0.150 to 0.300.
+			The values listed in Table~\ref{tab:stddev} range from roughly 0.150 to 0.300.
 			%
 			As the probability density function to which the data were fit was normalized to 1, the RMSE values are unitless.
 			%
@@ -600,16 +638,18 @@
 			%% PARA
 			
 			
-			Of the carbon dioxide sensors (see Fig.~\ref{fig:gaussco2} and Table~\ref{tab:stddev}), the Gascard and K-30 sensors produced the smallest standard deviation around the mean, $\sigma_{GAUSS}$, or the highest precision.
+			Of the \ce{CO2} sensors (see Figure~\ref{fig:gaussco2} and Table~\ref{tab:stddev}), the Gascard and K-30 sensors produced the smallest standard deviation around the mean, $\sigma_{GAUSS}$, or the highest precision.
 			%
 			The $\sigma_{GAUSS}$ value of the Telaire sensor was approximately 2 times than that of either the Gascard or the K-30 sensor.
 			%
 			The COZIR and Dynament (MSH-P/CO2) sensors generated $\sigma_{GAUSS}$ values which were significantly greater than that of the Gascard, Telaire and K-30 sensors.
 			%
-			Finally, Table~\ref{tab:stddev}) show that the dual gas Dynament (MSH-P/HC/CO2) sensor produced the largest $\sigma_{GAUSS}$ or deviation around the mean. However, the fluctuations around the mean for the Dynament sensors are still lower than the quoted resolutions in the manufacturer's documentation of 50 and 100 ppm, respectively, for these two sensors.
+			Finally, Table~\ref{tab:stddev}) shosw that the dual gas Dynament (MSH-P/HC/CO2) sensor produced the largest $\sigma_{GAUSS}$ or deviation around the mean.
+			%
+			The fluctuations around the mean for Dynament sensors are still lower than the quoted resolutions in the manufacturer's documentation of 50 and 100 ppm, respectively, for these two sensors.
 			%% PARA
 			
-			The Gascard sensor for carbon dioxide produced a normal response around the mean detected value with low RMSE.
+			The Gascard sensor for \ce{CO2} produced a normal response around the mean detected value with low RMSE.
 			%
 			At times, there were some large fluctuations, several standard deviations around the mean response, in the output of the Gascard.
 			%
@@ -617,11 +657,13 @@
 			%
 			For the K-30 sensor, a good Gaussian fit was produced (small RMSE).
 			%
-			However, the distribution for the K-30 was skewed toward higher concentration values and appeared to contain two overlapping peaks. This caused the $\sigma_{GAUSS}$ to be slightly larger and the RMSE to be artificially inflated.
+			However, the distribution for the K-30 was skewed toward higher concentration values and appeared to contain two overlapping peaks.
+			%
+			This caused the $\sigma_{GAUSS}$ to be slightly larger and the RMSE to be artificially inflated.
 			%
 			Careful analysis of this double peak showed each peak had a similar standard deviation ($\sigma$), suggesting a small shift in the mean measured value.
 			%
-			Since the K-30 sensor periodically adjusted for changing backgrounds in the firmware to ensure a normal output concentration of 400 ppm, the observed change in the reported mean concentration in the middle of the run was likely caused by this period background adjustment.
+			Since the K-30 sensor periodically adjusts for changing backgrounds in the firmware to ensure a normal output concentration of 400 ppm, the observed change in the reported mean concentration in the middle of the run was likely caused by this period background adjustment.
 			%
 			It is also possible the periodic temperature and pressure variations, which were corrected by the Gascard sensor, were responsible for the observed skew in the K-30.
 			%
@@ -643,29 +685,31 @@
 			%% PARA
 			
 			
-			For the optical methane sensors (see Fig.~\ref{fig:gaussch4} and Table~\ref{tab:stddev}), the Gascard for methane produced a $\sigma_{GAUSS}$ with a low RMSE. The single gas Dynament (MSH-P/HC/) hydrocarbon sensor produced a very low $\sigma_{GAUSS}$ and performed well in terms of precision.
+			For the optical \ce{CH4} sensors (see Figure~\ref{fig:gaussch4} and Table~\ref{tab:stddev}), the Gascard for \ce{CH4} produced a $\sigma_{GAUSS}$ with a low RMSE.
+			%
+			The single gas Dynament (MSH-P/HC/) hydrocarbon sensor produced a very low $\sigma_{GAUSS}$ and performed well in terms of precision.
 			%
 			The $\sigma_{GAUSS}$ for the dual-gas Dynament (MSH-DP/HC/CO2) sensor was not included in this table.
 			%
-			As mentioned previously, the dual-gas Dynament (MSH-DP/HC/CO2) sensor only reported two values for methane around the mean rather than a distribution of at least several values.
+			As mentioned previously, the dual-gas Dynament (MSH-DP/HC/CO2) sensor only reported two values for \ce{CH4} around the mean rather than a distribution of several values.
 			%
-			This result was consistent with the 100 ppm resolution quoted in the manufacturer's documentation for concentrations of less than 10\% methane.
+			This result was consistent with the 100 ppm resolution quoted in the manufacturer's documentation for concentrations of less than 10\% \ce{CH4}.
 			%% PARA
 			
 
-			The result for the chemiresistive methane sensors are also shown in Fig.~\ref{fig:gaussch4}, with a $\sigma_{GAUSS}$ and a RMSE results in Table~\ref{tab:stddev}.
+			The result for the chemiresistive \ce{CH4} sensors are also shown in Figure~\ref{fig:gaussch4}, with a $\sigma_{GAUSS}$ and a RMSE results in Table~\ref{tab:stddev}.
 			%
 			The distribution curve for the MQ-4 sensor was not included.
 			%
-			Since the MQ-4 sensor displayed significant baseline drift when compared to the TGS-2611 sensor (Fig.~\ref{fig:MQ4TGSbaseline}), the standard deviation was instead calculated directly from a relatively flat region of the baseline.
+			Since the MQ-4 sensor displayed significant baseline drift when compared to the TGS-2611 sensor (Figure~\ref{fig:MQ4TGSbaseline}), the standard deviation was instead calculated directly from a relatively flat region of the baseline.
 			%
 			This different treatment was not inconsistent with the use of the sensor in many applications where drift is a result of temperature and humidity.
 			%
-			 In general, the use of a dynamic background subtraction algorithm is required for chemiresistive sensors.
+			In general, the use of a dynamic background subtraction algorithm is required for chemiresistive sensors.
 			%
 			The $\sigma_{GAUSS}$ results of the TGS-2600 and TGS-2610 were similar, as expected due to their similar sensing mechanisms.
 			%
-			The baseline noise, as quantified by $\sigma_{GAUSS}$, for the methane optimized TGS-2611 sensor was lower than the other TGS sensors.
+			The baseline noise, as quantified by $\sigma_{GAUSS}$, for the \ce{CH4} optimized TGS-2611 sensor was lower than the other TGS sensors.
 			%% PARA
 			
 			
@@ -682,13 +726,13 @@
 							\multirow{6}{*}{\rotatebox[origin=c]{90}{Carbon Dioxide}}
 							& K-30 SE-0018     & 1.91   & 0.219  & 5.7 & 27.1\\
 							& COZIR AMB GC-020 & 14.1   & 0.304 & 42.3  & 80.6\\
-							& Gascard CO$_2$   & 2.12   & 0.223 &  6.4 & 32.1\\
+							& Gascard \ce{CO2}   & 2.12   & 0.223 &  6.4 & 32.1\\
 							& MSH-DP/HC/CO2   & 86.4   & 0.197  & 260 & 254\\
 							& MSH-P/CO2       & 17.6   & 0.217 & 52.8 & 68.0\\
 							& Telaire T6615    & 4.42   & 0.185 & 13.3 & 31.1\\ \hline
-							\multirow{4}{*}{\rotatebox[origin=c]{90}{Methane/Hydrocarbon}}
+							\multirow{4}{*}{\rotatebox[origin=c]{90}{\ce{CH4}/Hydrocarbon}}
 							& MQ-4  & 26.7 \tnote{\ddag}  & & 80.0 & 82.0\\
-							& Gascard CH$_4$   & 35.7   & 0.222  & 110 & 151\\
+							& Gascard \ce{CH4}   & 35.7   & 0.222  & 110 & 151\\
 							%& MSH-DP/HC/CO2   &see text&see text  \\
 							& MSH-P/HC       & 3.54   & 0.152  & 10.6 & 170 \\
 							& TGS-2600         & 36.1   & 0.225  & 110 & 117 \\
@@ -696,8 +740,8 @@
 							& TGS-2611         & 5.4  & 0.208 & 16.3 & 16.3
 						\end{tabular}
 						\begin{tablenotes}
-							\vspace{3pt}
-							\item[\dag] A linear calibration was utilized for the optical sensor, while the chemiresistive utilized the non-linear Langmuirian fit. See text.
+							\vspace{6pt}
+							\item[\dag] A linear calibration was utilized for the optical sensor, while the chemiresistive utilized the non-linear Langmuirian fit. See text. \\
 							\item[\ddag] This value was determined directly from the experimental response.
 							%
 							See text.
@@ -713,33 +757,35 @@
 			%
 			It should be noted these tests were carried out in a controlled environment and are best-case values.
 			%
-			Of the tested carbon dioxide sensors, the Gascard, K-30, and Telaire sensors have comparable low Limits of Detection.
+			Of the tested \ce{CO2} sensors, the Gascard, K-30, and Telaire sensors have comparable low limits of detection.
 			%
-			The COZIR and Dynament single analyte sensor (MSH-P/CO2) have the next highest Limit of Detection, and the Dynament dual analyte sensor (MSH-DP/HC/CO2) has the highest.
+			The COZIR and Dynament single analyte sensor (MSH-P/CO2) have the next highest limits of detection, and the Dynament dual analyte sensor (MSH-DP/HC/CO2) has the highest.
 			%
-			These results reflect the ordering of $\sigma_{GAUSS}$ in Table~\ref{tab:stddev}. They can be correlated with the optical path lengths of the sensors, in which larger pathways resulting in greater sensitively.
+			These results reflect the ordering of $\sigma_{GAUSS}$ in Table~\ref{tab:stddev}. They can be correlated with the optical path lengths of the sensors, in which larger pathways resulting in greater sensitivity.
 			%% PARA
 			
 		
-			The Limit of Detection for the Dynament single analyte methane sensor (MSH-P/HC)demonstrates the important influence of calibration error on the reported limit.
+			The limit of detection for the Dynament single analyte \ce{CH4} sensor (MSH-P/HC) demonstrates the important influence of calibration error on the reported limit.
 			%
 			For this sensor, the 3.54 ppm precision ($\sigma_{GAUSS}$) or deviation around the mean was significantly lower than the 50 ppm resolution quoted in the manufacturer's documentation at the low-end of the 1\% concentration range of the sensor.
 			%
-			Given the 50 ppm resolution, an IUPAC Limit of Detection of at least 150 ppm would be expected. After correcting for the calibration error, the Limit of Detection is 170 ppm, consistent with expectations.
+			Given the 50 ppm resolution, an IUPAC limit of detection of at least 150 ppm would be expected. 
+			%
+			After correcting for the calibration error, the limit of detection is 170 ppm, consistent with expectations.
 			%
 			However, the value produced by directly applying IUPAC $3\sigma$ definition was 16 times lower, illustrating the necessity of including the calibration uncertainty.
 			%% PARA
 			
 	
-			Of the tested chemiresistive methane sensors, the TGS-2611 sensor had the lowest Limit of Detection under controlled conditions, primarily due to its stable baseline, which influences both the background noise and the quality of the calibration.
+			Of the tested chemiresistive \ce{CH4} sensors, the TGS-2611 sensor had the lowest limit of detection under controlled conditions, primarily due to its stable baseline, which influences both the background noise and the quality of the calibration.
 			%
 			Similar sensitivities have been reported for the TGS-2600~\cite{eugster_performance_2012}.
 			%
-			Both the non-methane optimized TGS-2600 and TGS-2610 sensors had similar limits of detection which were slightly larger than the methane optimized TGS-2611 and the MQ-4.
+			Both the non-methane optimized TGS-2600 and TGS-2610 sensors had similar limits of detection which were slightly larger than the \ce{CH4} optimized TGS-2611 and the MQ-4.
 			%
 			The MQ-4 sensor has precision between the TGS-2611 and both the TGS-2600 and TGS-2610 sensors.
 			%
-			The 82 ppm limits of detection for the MQ-4 sensor is consistent with scatter in the calibration curve at concentration under 100 ppm (see Fig.~\ref{fig:mq4step}).
+			The 82 ppm limit of detection for the MQ-4 sensor is consistent with scatter in the calibration curve at concentration under 100 ppm (see Figure~\ref{fig:mq4step}).
 			%% PARA
 			
 			
@@ -748,16 +794,16 @@
 	\section{Conclusion}
 	
 		The performance of a sensor platform for environmental or industrial monitoring is sensitive to the cost and performance of the individual sensor elements.
-			%
-			Thus, the detection limits, accuracy, and precision for a range of potential sensors for measuring ppm concentrations of carbon dioxide and methane for low-cost monitoring instrumentation were quantified.
-			%
-			These parameters were quantified around the baseline atmospheric concentration for each analyte gas, which is approximately 400 ppm for carbon dioxide~\cite{blasing_recent_2016,dlugokencky_trends_2016} and under 2 ppm for methane~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}.
-			%
-			The selected sensors were also evaluated at gas concentrations exceeding 1000 ppm, in order to mimic a leak.
-			%% PARA
+		%
+		Thus, the detection limits, accuracy, and precision for a range of potential sensors for measuring ppm concentrations of \ce{CO2} and \ce{CH4} for low-cost monitoring instrumentation were quantified.
+		%
+		These parameters were quantified around the baseline atmospheric concentration for each analyte gas, which is approximately 400 ppm for \ce{CO2}~\cite{blasing_recent_2016,dlugokencky_trends_2016} and under 2 ppm for \ce{CH4}~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}.
+		%
+		The selected sensors were also evaluated at gas concentrations exceeding 1000 ppm, in order to mimic a leak.
+		%% PARA
 			
 		
-		For carbon dioxide, the Gascard sensor had high performance based on the low errors reported in Table~\ref{tab:stddev}, but is comparatively more expensive than the other sensors investigated.
+		For \ce{CO2}, the Gascard sensor had high performance based on the low errors reported in Table~\ref{tab:stddev}, but is comparatively more expensive than the other sensors investigated.
 		%
 		The Gascard is limited by reliance on active sampling, which requires a pump that introduces a source of additional power consumption, a mechanical failure point, and sampling complexity.
 		%
@@ -765,23 +811,30 @@
 		%
 		Thus, this sensor eliminates the need for additional sensors for precise measurements.
 		%
-		 Both the K-30 and Telaire sensors had good performance.
+		Both the K-30 and Telaire sensors had good performance.
 		%
 		The ability of the K-30 and Telaire sensors to operate by passive diffusion rather than mechanically pumped flow also reduces the cost and complexity of a potential monitoring system.
 		%
-		 The K-30 sensor also has the option to autozero by assuming the minimum concentration of a multi-day run is 400 ppm, if used properly, this feature has advantages for remote instrumentation.
+		The K-30 sensor also has the option to autozero by assuming the minimum concentration of a multi-day run is 400 ppm.
+		%
+		If used properly, this feature has advantages for remote instrumentation.
 		%% PARA
 		
 		
-		For methane, there is no single sensor which meets the ppm or even sub-ppm sensitivity required for environmental monitoring. The Limit of Detection for the selected relativity low-cost optical methane sensors reported in Table~\ref{tab:stddev}, collectively show that these NDIR sensors are not suitable for monitoring environmental levels of methane around the global average.
+		For \ce{CH4}, there is no single sensor which meets the ppm or even sub-ppm sensitivity required for environmental monitoring.
+		%
+		The limit of detection for the selected relativity low-cost optical \ce{CH4} sensors reported in Table~\ref{tab:stddev}, collectively show that these NDIR sensors are not suitable for monitoring environmental levels of \ce{CH4} around the global average.
 		%
 		Although progress has been made to produce viable sensors~\cite{zhu_one_2012}, larger, more costly devices are still required for precision measurements at the ppm level.
 		%
-		With an increasing focus on remote sensing technology, more precise low-cost methane sensors are required to produce accurate data at expected atmospheric concentrations.
+		With an increasing focus on remote sensing technology, more precise low-cost \ce{CH4} sensors are required to produce accurate data at expected atmospheric concentrations.
 		%
 		This work provides a framework for future sensor developers to follow to provide performance results in a manner which faithfully compares them to existing devices.
 		%% PARA
 		
+	\supplementary{%
+		The following are available online at \linksupplementary{s1}: Table S1: Manufacturer listed properties of evaluated \ce{CO2} sensors, Table S2: Manufacturer listed properties of evaluated \ce{CH4} sensors.
+	}%
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\authorcontributions{Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing--original draft preparation, X.X.; writing--review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y.}
@@ -807,8 +860,8 @@
 	\begin{tabular}{@{}ll}
 			\ce{CO2} & Carbon dioxide\\
 			\ce{CH4} & Methane\\
-			TLA & Three letter acronym\\
-			LD & linear dichroism
+			NDIR & Nondispersive Infrared\\
+			RMSE & Root-mean-squared error
 	\end{tabular}}
 	
 %	\bibliographystyle{elsarticle-num}
