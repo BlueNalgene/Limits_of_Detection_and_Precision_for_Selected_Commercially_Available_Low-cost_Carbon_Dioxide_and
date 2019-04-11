@@ -1,8 +1,41 @@
 %Comment this line out to use real graphics instead of demo boxes.
-%
-Do not use \usepackage[demo]{graphicx} because that causes
+%Do not use \usepackage[demo]{graphicx} because that causes
 %conflicts with other packages with dependencies.
-\documentclass[preprint,sort&compress]{elsarticle}
+\documentclass[sensors,article,submit,moreauthors,pdftex]{Definitions/mdpi} 
+% If you would like to post an early version of this manuscript as a preprint, you may use preprint as the journal and change 'submit' to 'accept'. The document class line would be, e.g., \documentclass[preprints,article,accept,moreauthors,pdftex]{mdpi}. This is especially recommended for submission to arXiv, where line numbers should be removed before posting. For preprints.org, the editorial staff will make this change immediately prior to posting.
+
+%--------------------
+% Class Options:
+%--------------------
+%----------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% acoustics, actuators, addictions, admsci, aerospace, agriculture, agriengineering, agronomy, algorithms, animals, antibiotics, antibodies, antioxidants, applsci, arts, asc, asi, atmosphere, atoms, axioms, batteries, bdcc, behavsci , beverages, bioengineering, biology, biomedicines, biomimetics, biomolecules, biosensors, brainsci , buildings, cancers, carbon , catalysts, cells, ceramics, challenges, chemengineering, chemistry, chemosensors, children, cleantechnol, climate, clockssleep, cmd, coatings, colloids, computation, computers, condensedmatter, cosmetics, cryptography, crystals, dairy, data, dentistry, designs , diagnostics, diseases, diversity, drones, econometrics, economies, education, electrochem, electronics, energies, entropy, environments, epigenomes, est, fermentation, fibers, fire, fishes, fluids, foods, forecasting, forests, fractalfract, futureinternet, futurephys, galaxies, games, gastrointestdisord, gels, genealogy, genes, geohazards, geosciences, geriatrics, hazardousmatters, healthcare, heritage, highthroughput, horticulturae, humanities, hydrology, ijerph, ijfs, ijgi, ijms, ijns, ijtpp, informatics, information, infrastructures, inorganics, insects, instruments, inventions, iot, j, jcdd, jcm, jcp, jcs, jdb, jfb, jfmk, jimaging, jintelligence, jlpea, jmmp, jmse, jnt, jof, joitmc, jpm, jrfm, jsan, land, languages, laws, life, literature, logistics, lubricants, machines, magnetochemistry, make, marinedrugs, materials, mathematics, mca, medicina, medicines, medsci, membranes, metabolites, metals, microarrays, micromachines, microorganisms, minerals, modelling, molbank, molecules, mps, mti, nanomaterials, ncrna, neuroglia, nitrogen, notspecified, nutrients, ohbm, particles, pathogens, pharmaceuticals, pharmaceutics, pharmacy, philosophies, photonics, physics, plants, plasma, polymers, polysaccharides, preprints , proceedings, processes, proteomes, psych, publications, quantumrep, quaternary, qubs, reactions, recycling, religions, remotesensing, reports, resources, risks, robotics, safety, sci, scipharm, sensors, separations, sexes, signals, sinusitis, smartcities, sna, societies, socsci, soilsystems, sports, standards, stats, surfaces, surgeries, sustainability, symmetry, systems, technologies, test, toxics, toxins, tropicalmed, universe, urbansci, vaccines, vehicles, vetsci, vibration, viruses, vision, water, wem, wevj
+
+%---------
+% article
+%---------
+% The default type of manuscript is "article", but can be replaced by: 
+% abstract, addendum, article, benchmark, book, bookreview, briefreport, casereport, changes, comment, commentary, communication, conceptpaper, conferenceproceedings, correction, conferencereport, expressionofconcern, extendedabstract, meetingreport, creative, datadescriptor, discussion, editorial, essay, erratum, hypothesis, interestingimages, letter, meetingreport, newbookreceived, obituary, opinion, projectreport, reply, retraction, review, perspective, protocol, shortnote, supfile, technicalnote, viewpoint
+% supfile = supplementary materials
+
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g., the logo of the journal will get visible), the headings, and the copyright information. Also, line numbering will be removed. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+
+%---------
+% pdftex
+%---------
+% The option pdftex is for use with pdfLaTeX. If eps figures are used, remove the option pdftex and use LaTeX and dvi2pdf.
+
+%\documentclass[preprint,sort&compress]{elsarticle}
 \usepackage{amsmath}
 \usepackage[version=3]{mhchem}
 \usepackage{url}
@@ -15,54 +48,71 @@ Do not use \usepackage[demo]{graphicx} because that causes
 \usepackage{placeins}
 \newcommand{\degree}{$^{\circ}$}
 
+\firstpage{1} 
+\makeatletter 
+\setcounter{page}{\@firstpage} 
+\makeatother
+\pubvolume{xx}
+\issuenum{1}
+\articlenumber{5}
+\pubyear{2019}
+\copyrightyear{2019}
+%\externaleditor{Academic Editor: name}
+\history{Received: date; Accepted: date; Published: date}
+%\updates{yes} % If there is an update available, un-comment this line
+
 \graphicspath{ {./images/} } %this removes clutter from the root folder
 
-\begin{document}
-	
-	\begin{frontmatter}
-		\title{Precision and Limits of Detection for Selected Commercially Available, Low-cost Carbon Dioxide and Methane Gas Sensors}
-		\author[chm]{Wesley T. Honeycutt}
-		\ead{wes.honeycutt@okstate.edu}
-		
-		\author[cve]{M. Tyler Ley}	
-		\ead{tyler.ley@okstate.edu}
-		
-		\author[chm]{Nicholas F. Materer\corref{cor1}}
-		\ead{materer@okstate.edu}
-		
-		\cortext[cor1]{Corresponding Author}
-		\address[chm]{Oklahoma State University, Department of Chemistry, 107 Physical Sciences, Stillwater, OK 74078, USA}
-		\address[cve]{Oklahoma State University, Department of Civil Engineering, 319C Engineering South, Stillwater, OK 74078, USA}
-		
-		\begin{abstract} 
-			
-			The performance of a sensor platform for environmental or industrial monitoring is sensitive to the cost and performance of the individual sensor elements.
-			%
-			Thus, the detection limits, accuracy, and precision of commercially available, low-cost carbon dioxide and methane gas concentration sensors were evaluated by precise measurements at known gas concentrations.
-			%
-			Sensors were selected based on market availability, cost, power consumption, detection range, and accuracy.
-			%
-			A specially constructed gas mixing chamber, coupled to a precision bench-top analyzer, was used to characterize each sensor during a controlled exposure to known gas concentrations.
-			%
-			For environmental monitoring, the selected carbon dioxide sensors were characterized around 400 ppm.
-			%
-			For the methane, sensor response was first monitored at 0 ppm, close to the typical environmental background.
-			%
-			The selected sensors were then evaluated at gas concentrations up to 1000 ppm.
-			%
-			The determined detection limits accuracy, and precision provides a set of matrices that can be used to evaluate and select sensors for integration into a sensor platform for specific applications.
-			%
+% Full title of the paper (Capitalized)
+\Title{Precision and Limits of Detection for Selected Commercially Available, Low-cost Carbon Dioxide and Methane Gas Sensors}
 
-			
-		\end{abstract}
-		
-		\begin{keyword}
-			Gas industry, Pollution measurement, Carbon Dioxide, Methane, Gas detectors, Sensor systems and applications
-		\end{keyword}
-		
-	\end{frontmatter}
-	
-	\newpage
+% Author Orchid ID: enter ID or remove command
+\newcommand{\orcidauthorA}{0000-0002-3681-4810} % Add \orcidA{} behind the author's name
+\newcommand{\orcidauthorB}{0000-0003-4266-5011} % Add \orcidB{} behind the author's name
+%\newcommand{\orcidauthorC}{0000-0003-4266-5011} % Add \orcidC{} behind the author's name
+
+% Authors, for the paper (add full first names)
+\Author{Wesley T. Honeycutt $^{1,\dagger,}$\orcidA{}, M. Tyler Ley $^{2,}$, and Nicholas F. Materer $^{3,}$\orcidB{}*}
+
+% Authors, for metadata in PDF
+\AuthorNames{Wesley T. Honeycutt, M. Tyler Ley, and Nicholas F. Materer}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address{%
+	$^{1}$ \quad Oklahoma State University, Department of Chemistry, 107 Physical Sciences, Stillwater, OK 74078, USA; wes.honeycutt@okstate.edu \\
+	$^{2}$ \quad Oklahoma State University Department of Civil Engineering; 319C Engineering South, Stillwater, OK 74078, USA; tyler.ley@okstate.edu \\
+	$^{2}$ \quad Oklahoma State University Department of Chemistry; 107 Physical Sciences, Stillwater, OK 74078, USA; materer@okstate.edu
+}%
+
+% Contact information of the corresponding author
+\corres{Correspondence: materer@okstate.edu}
+
+% Current address and/or shared authorship
+\firstnote{Current address: University of Oklahoma Biological Survey; 111 Chesapeake St.; Norman, OK 73019, USA} 
+%\secondnote{These authors contributed equally to this work.}
+% The commands \thirdnote{} till \eighthnote{} are available for further notes
+
+\abstract{%
+	The performance of a sensor platform for environmental or industrial monitoring is sensitive to the cost and performance of the individual sensor elements.
+	%
+	Thus, the detection limits, accuracy, and precision of commercially available, low-cost carbon dioxide and methane gas concentration sensors were evaluated by precise measurements at known gas concentrations.
+	%
+	Sensors were selected based on market availability, cost, power consumption, detection range, and accuracy.
+	%
+	A specially constructed gas mixing chamber, coupled to a precision bench-top analyzer, was used to characterize each sensor during a controlled exposure to known gas concentrations.
+	%
+	For environmental monitoring, the selected carbon dioxide sensors were characterized around 400 ppm.
+	%
+	For the methane, sensor response was first monitored at 0 ppm, close to the typical environmental background.
+	%
+	The selected sensors were then evaluated at gas concentrations up to 1000 ppm.
+	%
+	The determined detection limits accuracy, and precision provides a set of matrices that can be used to evaluate and select sensors for integration into a sensor platform for specific applications.
+}%
+
+\keyword{Sensor systems and applications, Carbon Dioxide, Methane}
+
+\begin{document}
 	
 	\section{Introduction}
 	\label{sec:intro}
@@ -78,7 +128,7 @@ Do not use \usepackage[demo]{graphicx} because that causes
 		Aspects of effective sampling, along with other considerations, are discussed by Keith et al.~\cite{keith_principles_1983}.
 		%% PARA
 		
-		Potential sensor platforms must consider the Limit of Detection, precision, accuracy, reliability, and power consumption for each sensor integrated within the unit.
+		Potential sensor platforms must consider the limit of detection, precision, accuracy, reliability, and power consumption for each sensor integrated within the unit.
 		%
 		Such devices include, but are not limited to, those used in HVAC air handlers~\cite{yang_systematic_2014,chung_selective_2008}, chemical processing units~\cite{won_nonlinear_2012}, oil well monitoring devices~\cite{yi_remote_2010,somov_deployment_2013}, and environmental monitoring~\cite{pering_high_2014,black_formation_2012,guohua_study_2012,karunanithi_performance_2009,shendell_outdoor_2012}.
 		%
@@ -733,13 +783,36 @@ Do not use \usepackage[demo]{graphicx} because that causes
 		%% PARA
 		
 	
-	\section*{Acknowledgment}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\authorcontributions{Conceptualization, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing--original draft preparation, X.X.; writing--review and editing, X.X.; visualization, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y.}
 	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\funding{%
 		The authors acknowledge the financial support of this work by U.S. Department of Energy under contract DE-FOA-0000798.
 		%
-		Additional support was provided by Oklahoma State University. 
+		Additional support was provided by Oklahoma State University.
+	}%
 	
-	\bibliographystyle{elsarticle-num}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	\acknowledgments{In this section you can acknowledge any support given which is not covered by the author contribution or funding sections. This may include administrative and technical support, or donations in kind (e.g., materials used for experiments).}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\conflictsofinterest{The authors declare no conflict of interest.} 
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%% optional
+	\abbreviations{The following abbreviations are used in this manuscript:\\
+		
+	\noindent 
+	\begin{tabular}{@{}ll}
+			\ce{CO2} & Carbon dioxide\\
+			\ce{CH4} & Methane\\
+			TLA & Three letter acronym\\
+			LD & linear dichroism
+	\end{tabular}}
+	
+%	\bibliographystyle{elsarticle-num}
+	\externalbibliography{yes}
 	\bibliography{bib}
 	
 \end{document}
