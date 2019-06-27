@@ -45,6 +45,7 @@
 \usepackage{pdfpages}
 \usepackage{multirow}
 \usepackage{siunitx}
+\usepackage{amssymb}
 \usepackage{microtype}
 \usepackage{placeins}
 \newcommand{\degree}{$^{\circ}$}
@@ -124,7 +125,7 @@
 		%
 		Since these gases are also considered greenhouse gases, monitoring of industrial sites is important to understand their impact on the environment.
 		%
-		Collection of multiple samples at multiple locations in a given area is critical to obtain reliable results, and this directly impacts the overall complexity and cost.
+		Collection of multiple samples at several locations in a given area is critical to obtain reliable results, and this directly impacts the overall complexity and cost.
 		%
 		Aspects of effective sampling, along with other considerations, are discussed by Keith et al.~\cite{keith_principles_1983}.
 		%% PARA
@@ -302,9 +303,7 @@
 			%
 			For the sensor calibrations, uncertainty in the absolute concentration of the carrier gas will introduce an error in the intercept but not the slope.
 			%
-			Thus, this systematic error will have small effect on the calibration-corrected limit of detection.
-			%
-			However, this systematic error was found to be insignificant relative to the random errors in the experiment.
+			While any systematic error will have small effect on the calibration-corrected limit of detection, the random uncertainty dominates any potential systematic bias of a few ppm.  
 			%% PARA
 			
 			Multiple sensors were operated concurrently as shown in Figure~\ref{fig:exposureapparatus2}.
@@ -431,13 +430,13 @@
 			%
 			IUPAC defines the limit of detection as three times the standard deviation ($\sigma$) from the background.
 			%
-			For the sensors discussed here, the raw output from the sensors must be transformed into concentration value, and any error in the calibration will affect the limit of detection.
+			For the sensors discussed here, the raw output from the sensors must be transformed into a concentration, and any uncertainties in the calibration will affect the limit of detection.
 			%
 			For measurements requiring a calibration curve, Long and Winefordner provide a review of the various definitions as well as several examples~\cite{long_limit_1983}.
 			%
-			For optical sensors, their procedure to include the errors in the slope and intercept in the calculated the limit of detection was utilized.
+			For optical sensors, their procedure to include the uncertainties in the slope and intercept in the calculated the limit of detection was utilized.
 			%
-			For the non-linear chemiresistive sensors, the asymptotic standard errors in $a$ and $b$ were propagation to correct the IUPAC limit of detection.
+			For the non-linear chemiresistive sensors, the asymptotic standard uncertainties in $a$ and $b$ were propagation to correct the IUPAC limit of detection.
 			%% PARA
 			
 	
@@ -457,9 +456,13 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey3.pdf}
-				\caption{The Gascard (top) and K-30 (bottom) sensor response over time at high (1433 ppm, plotted with ``$\times$'' on the plot) and low (577 ppm, plotted with ``$+$'') concentrations of \ce{CO2}.
-				%
-				The reported concentrations (577 and 1433 ppm) were determined by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer.}
+				\caption{%
+					This combined figure of the response curve of the K-30 (plotted with ``$+$'' and ``$\times$'') and Gascard (plotted with ``$\ast$'' and ``$\Box$'') shows consistent discrepancy between both sensors during gas concentration increases.
+					%
+					Both sensors, in the presence of clean air, were subjected to injection of \ce{CO2} of 577 and 1433 ppm (exact concentrations determined by the California Analytical Instruments, Inc. ZRE Non-Dispersive Infrared Analyzer) before the chamber was flushed with clean air.
+					%
+					The response of the sensors to both the increase and decrease in concentration of \ce{CO2} was quicker than the sampling time of the experiment.
+				}
 				\label{fig:peakdetailco2}
 			\end{figure}
 			
@@ -467,7 +470,7 @@
 			%
 			In our setup, the MQ-4 produces significant overshoot.
 			%
-			Some of the overshoot is inherent to the sensor, but some could also be a result of the small interruption in the gas flow during a concentration change.
+			Some of the overshoot is inherent to the sensor, but could also be a result of the small interruption in the gas flow during a concentration change.
 			%
 			For all concentrations, a stable value within 2.5\% of the mean was produced after 78$\pm$\SI{10}{\second}, when averaged over all experiments.
 			%
@@ -515,17 +518,21 @@
 			%
 			For example, the K-30 sensors can auto-calibrate the zero based on known average background level of \ce{CO2}.
 			%
-			In general, it was found the intercept must be adjusted before deployment.
+			In general, it was found the intercept must be adjusted before use.
 			%% PARA
 			
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=0.9\columnwidth]{honey9.pdf}
-				\caption{The response of the Gascard and MQ-4 sensors with respect to the concentration reported from the California Analytical Instruments Inc. ZRE Non-Dispersive Infrared Analyzer for different concentrations of either \ce{CO2} or \ce{CH4}, respectively.
+				\caption{%
+					The response of the Gascard and MQ-4 sensors with respect to the concentration reported from the California Analytical Instruments Inc. ZRE Non-Dispersive Infrared Analyzer for different concentrations of either \ce{CO2} or \ce{CH4}, respectively.
+					%
+					This plot reports values directly from the instrument.
 					%
 					The top part of the figure shows the response of an optical \ce{CO2} sensor with the expected linear behavior.
 					%
-					The bottom part of the figure shows the response of a chemiresistive \ce{CH4} sensor (MQ-4, response is expressed in conductivity) with a fit to the non-linear response}
+					The bottom part of the figure shows the response of a chemiresistive \ce{CH4} sensor (MQ-4, expressed in conductivity rather than concentration as this is the directly reported value of the sensor) with a fit to the non-linear response.
+				}
 				\label{fig:gascardcodiff}
 			\end{figure}
 			
@@ -572,9 +579,13 @@
 			\begin{figure}[!t]
 				\centering
 				\includegraphics[width=\columnwidth]{honey5.pdf}
-				\caption{Long term baseline data were collected at the atmospheric baseline conditions (using a bottle of compressed medical grade breathing air (approximately 0 ppm \ce{CH4}), in the gas mixing chamber.
-				%
-				The baseline fluctuations can be observed in these plots.}
+				\caption{%
+					Long term baseline data were collected at the atmospheric baseline conditions (using a bottle of compressed medical grade breathing air (approximately 0 ppm \ce{CH4}), in the gas mixing chamber.
+					%
+					The reported values are in units of conductivity obtained directly from the instrument, and cannot be reported as concentration for inter-unit comparison.
+					%
+					The baseline fluctuations can be observed in these plots.
+				}
 				\label{fig:MQ4TGSbaseline}
 			\end{figure}
 			
@@ -644,7 +655,7 @@
 			%
 			The COZIR and Dynament (MSH-P/CO2) sensors generated $\sigma_{GAUSS}$ values which were significantly greater than that of the Gascard, Telaire and K-30 sensors.
 			%
-			Finally, Table~\ref{tab:stddev}) shosw that the dual gas Dynament (MSH-P/HC/CO2) sensor produced the largest $\sigma_{GAUSS}$ or deviation around the mean.
+			Finally, Table~\ref{tab:stddev}) shows that the dual gas Dynament (MSH-P/HC/CO2) sensor produced the largest $\sigma_{GAUSS}$ or deviation around the mean.
 			%
 			The fluctuations around the mean for Dynament sensors are still lower than the quoted resolutions in the manufacturer's documentation of 50 and 100 ppm, respectively, for these two sensors.
 			%% PARA
@@ -681,7 +692,7 @@
 			%
 			It was suspected that the larger deviations around the mean for the Telaire sensor and resulting $\sigma_{GAUSS}$ values are due to changes in the ambient light.
 			%
-			Further experiments with the sensor shielded from ambient light confirmed this suspicion.
+			Further experiments with the sensor shielded from ambient light substantiate this suspicion.
 			%% PARA
 			
 			
@@ -707,7 +718,7 @@
 			%
 			In general, the use of a dynamic background subtraction algorithm is required for chemiresistive sensors.
 			%
-			The $\sigma_{GAUSS}$ results of the TGS-2600 and TGS-2610 were similar, as expected due to their similar sensing mechanisms.
+			The $\sigma_{GAUSS}$ results of the TGS-2600 and TGS-2610 were similar, as expected due to their comparable sensing mechanisms.
 			%
 			The baseline noise, as quantified by $\sigma_{GAUSS}$, for the \ce{CH4} optimized TGS-2611 sensor was lower than the other TGS sensors.
 			%% PARA
@@ -761,19 +772,17 @@
 			%
 			The COZIR and Dynament single analyte sensor (MSH-P/CO2) have the next highest limits of detection, and the Dynament dual analyte sensor (MSH-DP/HC/CO2) has the highest.
 			%
-			These results reflect the ordering of $\sigma_{GAUSS}$ in Table~\ref{tab:stddev}. They can be correlated with the optical path lengths of the sensors, in which larger pathways resulting in greater sensitivity.
+			These results reflect the ordering of $\sigma_{GAUSS}$ in Table~\ref{tab:stddev}. These results can also be correlated with the optical path lengths of the sensors,  Larger path lengths resulting in greater sensitivity.
 			%% PARA
 			
 		
-			The limit of detection for the Dynament single analyte \ce{CH4} sensor (MSH-P/HC) demonstrates the important influence of calibration error on the reported limit.
+			The limit of detection for the Dynament single analyte \ce{CH4} sensor (MSH-P/HC) demonstrates the important influence of calibration uncertainties on the reported limit.
 			%
 			For this sensor, the 3.54 ppm precision ($\sigma_{GAUSS}$) or deviation around the mean was significantly lower than the 50 ppm resolution quoted in the manufacturer's documentation at the low-end of the 1\% concentration range of the sensor.
 			%
-			Given the 50 ppm resolution, an IUPAC limit of detection of at least 150 ppm would be expected. 
+			The  IUPAC limit of detection is 10.6 ppm.  After correcting for the calibration error, the limit of detection is 170 ppm.  This larger limit of detection is more consistent with expectations based the stated resolution of this sensor. 
 			%
-			After correcting for the calibration error, the limit of detection is 170 ppm, consistent with expectations.
-			%
-			However, the value produced by directly applying IUPAC $3\sigma$ definition was 16 times lower, illustrating the necessity of including the calibration uncertainty.
+			% removed - repeates the first line.  However, the value produced by directly applying IUPAC $3\sigma$ definition was 16 times lower, illustrating the necessity of including the calibration uncertainty.
 			%% PARA
 			
 	
@@ -795,41 +804,44 @@
 	
 		The performance of a sensor platform for environmental or industrial monitoring is sensitive to the cost and performance of the individual sensor elements.
 		%
-		Thus, the detection limits, accuracy, and precision for a range of potential sensors for measuring ppm concentrations of \ce{CO2} and \ce{CH4} for low-cost monitoring instrumentation were quantified.
+		The detection limits, accuracy, and precision for a range of potential sensors for measuring ppm concentrations of \ce{CO2} and \ce{CH4} for low-cost monitoring instrumentation quantified under consistent conditions and experimental methodologies  
 		%
 		These parameters were quantified around the baseline atmospheric concentration for each analyte gas, which is approximately 400 ppm for \ce{CO2}~\cite{blasing_recent_2016,dlugokencky_trends_2016} and under 2 ppm for \ce{CH4}~\cite{turner_large_2016,bamberger_spatial_2014,dlugokencky_trends_2016-1}.
 		%
-		The selected sensors were also evaluated at gas concentrations exceeding 1000 ppm, in order to mimic a leak.
+		The selected sensors were also evaluated at gas concentrations exceeding 1000 ppm, in order to mimic a leak from a \ce{CO2} sequestration location or a gas well.
 		%% PARA
 			
 		
-		For \ce{CO2}, the Gascard sensor had high performance based on the low errors reported in Table~\ref{tab:stddev}, but is comparatively more expensive than the other sensors investigated.
+		For \ce{CO2}, the Gascard sensor had high-performance based on the detection limits and precision reported in Table~\ref{tab:stddev}, but is comparatively more expensive than the other sensors investigated.
 		%
-		The Gascard is limited by reliance on active sampling, which requires a pump that introduces a source of additional power consumption, a mechanical failure point, and sampling complexity.
+		The Gascard sensor is also limited by reliance on active sampling, which requires a pump that introduces a source of additional power consumption, a mechanical failure point, and sampling complexity.
 		%
-		Since concentrations are parts-per notation, the inclusion of temperature and pressure corrections on the Gascard is useful to automatically correct for these values.
+		Nevertheless, given that concentrations are typically reported in parts-per notation, the inclusion of temperature and pressure corrections on the Gascard sensor allow it to automatically correct the reported ppm value and eliminates the need for additional sensors.
 		%
-		Thus, this sensor eliminates the need for additional sensors for precise measurements.
-		%
-		Both the K-30 and Telaire sensors had good performance.
+		The lower cost  K-30 and Telaire sensors also had good performance.
 		%
 		The ability of the K-30 and Telaire sensors to operate by passive diffusion rather than mechanically pumped flow also reduces the cost and complexity of a potential monitoring system.
 		%
-		The K-30 sensor also has the option to autozero by assuming the minimum concentration of a multi-day run is 400 ppm.
+		The K-30 sensor, along with suggested corrections for improved accuracy, has also investigated for ambient air monitoring.~\cite{amt-10-2383-2017}
 		%
-		If used properly, this feature has advantages for remote instrumentation.
+		One unique feature of the K-30 sensor is that it has an option to autozero and correct reported output by assuming the minimum concentration of a multi-day run is 400 ppm.
+		%
+		If implemented, this feature has advantages for remote instrumentation.
 		%% PARA
 		
 		
-		For \ce{CH4}, there is no single sensor which meets the ppm or even sub-ppm sensitivity required for environmental monitoring.
+		%started more positive
+		For low-cost chemiresistive \ce{CH4} sensors, the performance as expected at concentration greater than the measured limit of detection (Table~\ref{tab:stddev}) or, equivalently, greater than approximately 100 ppm.
 		%
-		The limit of detection for the selected relativity low-cost optical \ce{CH4} sensors reported in Table~\ref{tab:stddev}, collectively show that these NDIR sensors are not suitable for monitoring environmental levels of \ce{CH4} around the global average.
+		However, these sensors do not meet the ppm or even sub-ppm sensitivity required for environmental monitoring.
+		%
+		The more expansive but still relatively low-cost optical NDIR \ce{CH4} sensors (the GasCard \ce{CH4} and  MSH-P / HC) also preform well at higher concentrations, but lack the required sensitivity for monitoring environmental levels of \ce{CH4} around the global average.
 		%
 		Although progress has been made to produce viable sensors~\cite{zhu_one_2012}, larger, more costly devices are still required for precision measurements at the ppm level.
 		%
-		With an increasing focus on remote sensing technology, more precise low-cost \ce{CH4} sensors are required to produce accurate data at expected atmospheric concentrations.
+		With an increasing focus on remote sensing technology, a new generation of higher-sensitivity low-cost \ce{CH4} sensors will be required to produce accurate data at expected atmospheric concentrations.
 		%
-		This work provides a framework for future sensor developers to follow to provide performance results in a manner which faithfully compares them to existing devices.
+		The reported detection limits and precision for a range of available low-cost sensors, all measured using the same methodology and experimental equipment, provides a solid reference to which future improvements can be benchmarked against.
 		%% PARA
 		
 	\supplementary{%
